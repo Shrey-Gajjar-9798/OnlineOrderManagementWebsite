@@ -1,0 +1,830 @@
+<!DOCTYPE html>
+<!-- This represents the menu -->
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Easy Eats Restaurant</title>
+
+  <!-- Reference to other files -->
+  <link rel="stylesheet" href="../css/olive.css">
+  <link rel="stylesheet" href="../css/global.css">
+
+  <!-- FavIcon -->
+  <!--<link rel="shortcut icon" href="../images/tomato.ico" type="image/x-icon">-->
+
+  <!-- Required Libaries -->
+  <link href="../libs/bootstrap-3.3.7-dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="../libs/bootstrap-3.3.7-dist/css/bootstrap-theme.min.css" rel="stylesheet">
+  <link href="../libs/font-awesome-4.6.3/css/font-awesome.min.css" rel="stylesheet">
+
+  <!-- Font API'S -->
+  <link href="https://fonts.googleapis.com/css?family=Oleo+Script|Roboto" rel="stylesheet">
+  <style>h4 {text-align: center;}</style>
+</head>
+
+<!-- Navigation bar -->
+<nav class="navbar navbar-default navbar-fixed-top">
+  <div class="container-fluid">
+    
+    <a href ="#" class = "navbar-brand navbar-left navName" style="color: black">Easy Eats Restaurant</a>
+
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" style="color: black" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+        <span class="sr-only">Toggle navigation</span>
+        
+
+      </button>
+    </div>
+
+    <form class="navbar-form navbar-left">
+      <div class="form-group">
+        <input type="text" class="form-control" placeholder="Search">
+      </div>
+      <button type="submit" class="btn btn-default">Search</button>
+    </form>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div id= "navbar" class="navbar-collapse collapse">
+      <ul class="nav navbar-nav navbar-right navName2">
+        <li><a href="C:\Users\FMIN\Desktop\online-ordering-system-master\homepage.html"><span class="glyphicon glyphicon-home" aria-hidden="true"></span> Home</a></li>
+      </ul>
+    </div>
+
+  </div>
+</nav>
+
+<body>
+ 
+
+  <!-- Menu Content -->
+  <div class="menu container-fluid">
+
+    <div class="left-media-body col-md-8">
+
+      <div class="dropdown" >
+        <button class="btn btn-default dropdown-toggle" type="button"
+        id="drop-down-menu" data-toggle="dropdown">Choose Category <span class="caret"></span></button>
+
+        <ul class="dropdown-menu active" aria-labelled-by="drop-down-menu">
+          <li><a onClick="showHide('appetizer');" href="#">Appetizer</a></li>
+          <li><a onClick="showHide('main-course');" href="#">BIG MOUTH BURGERS</a></li>
+          <li><a onClick="showHide('dessert');" href="#">Dessert</a></li>
+          <li><a onClick="showHide('drinks');" href="#">Drinks</a></li>
+        </ul>
+      </div>
+
+        <!-- Appetizer -->
+        <div id="appetizer">
+          <h4>Appetizer</h4>
+          <hr>
+          <div class="media dish1">
+            <a class="media-left" onclick="return false">
+              <img class="media-object" src="../images/olive-garden/dish1.jpg"
+              alt="Generic placeholder image">
+            </a>
+
+            <div class="media-body">
+              <h3 class="media-heading">Classic Nachos <div class="pull-right">₹ 350</div></h3>
+              <p>Shredded cheese, black beans, jalapeños, Skillet Queso with beef. Served with pico & sour cream.</p>
+
+              <div class="add-minus-button">
+                <button type="button" class="btn btn-primary pull-right btn-sq-xs btn-danger"
+                onclick="changeQuantity(+1,1)">+</button>
+                <span id="quantity1-1" class="pull-right digit">0
+                  <script> displayQuantity(1);</script>
+                </span>
+                <button type="button" class="btn btn-primary pull-right btn-sq-xs btn-danger"
+                onclick="changeQuantity(-1,1)">-</button>
+              </div>
+
+            </div>
+          </div>
+
+          <hr>
+          <div class="media dish2">
+            <a class="media-left" onclick="return false">
+              <img class="media-object" src="../images/olive-garden/dish2.jpg"
+              alt="Generic placeholder image">
+            </a>
+
+            <div class="media-body">
+              <h3 class="media-heading">Chips & Salsa <div class="pull-right">₹ 300</div></h3>
+              <p>Extra-thin authentic corn tostada chips made fresh daily. Served with fresh salsa.</p>
+
+              <div class="add-minus-button">
+                <button type="button" class="btn btn-primary pull-right btn-sq-xs btn-danger"
+                onclick="changeQuantity(+1,2)">+</button>
+                <span id="quantity2-1" class="pull-right digit">0
+                  <script> displayQuantity(2);</script>
+                </span>
+                <button type="button" class="btn btn-primary pull-right btn-sq-xs btn-danger"
+                onclick="changeQuantity(-1,2)">-</button>
+              </div>
+
+            </div>
+          </div>
+
+          <hr>
+          <div class="media dish3">
+            <a class="media-left" onclick="return false">
+              <img class="media-object" src="../images/olive-garden/dish3.jpg"
+              alt="Generic placeholder image">
+            </a>
+
+            <div class="media-body">
+              <h3 class="media-heading">Bone-in Wings <div class="pull-right">₹ 250</div></h3>
+              <p>Hand-tossed in choice of sauce, celery, dipping sauce.</p>
+
+              <div class="add-minus-button">
+                <button type="button" class="btn btn-primary pull-right btn-sq-xs btn-danger"
+                onclick="changeQuantity(+1,3)">+</button>
+                <span id="quantity3-1" class="pull-right digit">0
+                  <script> displayQuantity(3);</script>
+                </span>
+                <button type="button" class="btn btn-primary pull-right btn-sq-xs btn-danger"
+                onclick="changeQuantity(-1,3)">-</button>
+              </div>
+
+            </div>
+          </div>
+
+          <hr>
+          <div class="media dish4">
+            <a class="media-left" onclick="return false">
+              <img class="media-object" src="../images/olive-garden/dish4.jpg"
+              alt="Generic placeholder image">
+            </a>
+
+            <div class="media-body">
+              <h3 class="media-heading">White Spinach Queso <div class="pull-right">₹ 400</div></h3>
+              <p>With pico, guacamole, cilantro. Served with chips & salsa.</p>
+
+              <div class="add-minus-button">
+                <button type="button" class="btn btn-primary pull-right btn-sq-xs btn-danger"
+                onclick="changeQuantity(+1,4)">+</button>
+                <span id="quantity4-1" class="pull-right digit">0
+                  <script> displayQuantity(4);</script>
+                </span>
+                <button type="button" class="btn btn-primary pull-right btn-sq-xs btn-danger"
+                onclick="changeQuantity(-1,4)">-</button>
+              </div>
+
+            </div>
+          </div>
+
+
+        </div> <!-- End appetizer -->
+
+        <!-- Main Course -->
+        <div id="main-course">
+          <h4>BIG MOUTH BURGERS</h4>
+          <hr>
+          <div class="media main1">
+            <a class="media-left" onclick="return false">
+              <img class="media-object" src="../images/olive-garden/main1.jpg"
+              alt="Generic placeholder image">
+            </a>
+
+            <div class="media-body">
+              <h3 class="media-heading">Alex's Santa Fe Burger* <div class="pull-right">₹ 150</div></h3>
+              <p>Yes, Chef Alex is real. And so are his burger skills. Stacked high with avocado, pepper Jack, red onion, roasted jalapeños, tomato, pickles, cilantro & spicy Santa Fe sauce.</p>
+
+              <div class="add-minus-button">
+                <button type="button" class="btn btn-primary pull-right btn-sq-xs btn-danger"
+                onclick="changeQuantity(+1,5)">+</button>
+                <span id="quantity5-1" class="pull-right digit">0
+                  <script> displayQuantity(5);</script>
+                </span>
+                <button type="button" class="btn btn-primary pull-right btn-sq-xs btn-danger"
+                onclick="changeQuantity(-1,5)">-</button>
+              </div>
+
+            </div>
+          </div>
+
+          <hr>
+          <div class="media main2">
+            <a class="media-left" onclick="return false">
+              <img class="media-object" src="../images/olive-garden/main2.jpg"
+              alt="Generic placeholder image">
+            </a>
+
+            <div class="media-body">
+              <h3 class="media-heading">Chili's Chili Burger<div class="pull-right">₹ 200</div></h3>
+              <p>We brought back our 1975 Original Chili, added shredded and American cheese, sauteed onions & crispy tortilla strips.</p>
+
+              <div class="add-minus-button">
+                <button type="button" class="btn btn-primary pull-right btn-sq-xs btn-danger"
+                onclick="changeQuantity(+1,6)">+</button>
+                <span id="quantity6-1" class="pull-right digit">0
+                  <script> displayQuantity(6);</script>
+                </span>
+                <button type="button" class="btn btn-primary pull-right btn-sq-xs btn-danger"
+                onclick="changeQuantity(-1,6)">-</button>
+              </div>
+
+            </div>
+          </div>
+
+          <hr>
+          <div class="media main3">
+            <a class="media-left" onclick="return false">
+              <img class="media-object" src="../images/olive-garden/main3.jpg"
+              alt="Generic placeholder image">
+            </a>
+
+            <div class="media-body">
+              <h3 class="media-heading">Oldtimer w/Cheese<div class="pull-right">₹ 100</div></h3>
+              <p>You can’t top burger perfection, unless you add cheese.</p>
+
+              <div class="add-minus-button">
+                <button type="button" class="btn btn-primary pull-right btn-sq-xs btn-danger"
+                onclick="changeQuantity(+1,7)">+</button>
+                <span id="quantity7-1" class="pull-right digit">0
+                  <script> displayQuantity(7);</script>
+                </span>
+                <button type="button" class="btn btn-primary pull-right btn-sq-xs btn-danger"
+                onclick="changeQuantity(-1,7)">-</button>
+              </div>
+
+            </div>
+          </div>
+
+          <hr>
+          <div class="media main4">
+            <a class="media-left" onclick="return false">
+              <img class="media-object" src="../images/olive-garden/main4.jpg"
+              alt="Generic placeholder image">
+            </a>
+
+            <div class="media-body">
+              <h3 class="media-heading"> Big Mouth Bites<div class="pull-right">₹ 700</div></h3>
+              <p>4 mini burgers with bacon, American cheese, sauteed onions, house-made ranch.</p>
+
+              <div class="add-minus-button">
+                <button type="button" class="btn btn-primary pull-right btn-sq-xs btn-danger"
+                onclick="changeQuantity(+1,8)">+</button>
+                <span id="quantity8-1" class="pull-right digit">0
+                  <script> displayQuantity(8);</script>
+                </span>
+                <button type="button" class="btn btn-primary pull-right btn-sq-xs btn-danger"
+                onclick="changeQuantity(-1,8)">-</button>
+              </div>
+
+            </div>
+          </div>
+
+
+        </div>
+
+        <!-- Dessert-->
+        <div id="dessert">
+          <h4>Dessert</h4>
+          <hr>
+          <div class="media dess1">
+            <a class="media-left" onclick="return false">
+              <img class="media-object" src="../images/olive-garden/dess1.jpg"
+              alt="Generic placeholder image">
+            </a>
+
+            <div class="media-body">
+              <h3 class="media-heading">Black Tie Mousse Cake<div class="pull-right">₹ 300</div></h3>
+              <p>Rich layers of chocolate cake, dark chocolate cheesecake and creamy custard mousse.</p>
+
+              <div class="add-minus-button">
+                <button type="button" class="btn btn-primary pull-right btn-sq-xs btn-danger"
+                onclick="changeQuantity(+1,9)">+</button>
+                <span id="quantity9-1" class="pull-right digit">0
+                  <script> displayQuantity(9);</script>
+                </span>
+                <button type="button" class="btn btn-primary pull-right btn-sq-xs btn-danger"
+                onclick="changeQuantity(-1,9)">-</button>
+              </div>
+
+            </div>
+          </div>
+
+          <hr>
+          <div class="media dess2">
+            <a class="media-left" onclick="return false">
+              <img class="media-object" src="../images/olive-garden/dess2.jpg"
+              alt="Generic placeholder image">
+            </a>
+
+            <div class="media-body">
+              <h3 class="media-heading">Warm Apple Crostata<div class="pull-right">₹ 320</div></h3>
+              <p>Northern Spy apples are baked inside a crispy pastry crust within hours of harvest! Served warm and topped with vanilla ice cream and a caramel drizzle.</p>
+
+              <div class="add-minus-button">
+                <button type="button" class="btn btn-primary pull-right btn-sq-xs btn-danger"
+                onclick="changeQuantity(+1,10)">+</button>
+                <span id="quantity10-1" class="pull-right digit">0
+                  <script> displayQuantity(10);</script>
+                </span>
+                <button type="button" class="btn btn-primary pull-right btn-sq-xs btn-danger"
+                onclick="changeQuantity(-1,10)">-</button>
+              </div>
+
+            </div>
+          </div>
+
+          <hr>
+          <div class="media dess3">
+            <a class="media-left" onclick="return false">
+              <img class="media-object" src="../images/olive-garden/dess3.jpg"
+              alt="Generic placeholder image">
+            </a>
+
+            <div class="media-body">
+              <h3 class="media-heading">Sicilian Cheesecake with Amarena Cherries<div class="pull-right">₹ 350</div></h3>
+              <p>Sweet, yet tart, wild amarena cherries from Northern Italy are the perfect seasonal topping for out ricotta cheesecake with a shortbread cookie crust.</p>
+
+              <div class="add-minus-button">
+                <button type="button" class="btn btn-primary pull-right btn-sq-xs btn-danger"
+                onclick="changeQuantity(+1,11)">+</button>
+                <span id="quantity11-1" class="pull-right digit">0
+                  <script> displayQuantity(11);</script>
+                </span>
+                <button type="button" class="btn btn-primary pull-right btn-sq-xs btn-danger"
+                onclick="changeQuantity(-1,11)">-</button>
+              </div>
+
+            </div>
+          </div>
+
+          <hr>
+          <div class="media dess4">
+            <a class="media-left" onclick="return false">
+              <img class="media-object" src="../images/olive-garden/dess4.jpg"
+              alt="Generic placeholder image">
+            </a>
+
+            <div class="media-body">
+              <h3 class="media-heading">Tiramisu<div class="pull-right">₹ 400</div></h3>
+              <p>The classic Italian dessert. A layer of creamy custard set atop espresso-soaked ladyfingers.</p>
+
+              <div class="add-minus-button">
+                <button type="button" class="btn btn-primary pull-right btn-sq-xs btn-danger"
+                onclick="changeQuantity(+1,12)">+</button>
+                <span id="quantity12-1" class="pull-right digit">0
+                  <script> displayQuantity(12);</script>
+                </span>
+                <button type="button" class="btn btn-primary pull-right btn-sq-xs btn-danger"
+                onclick="changeQuantity(-1,12)">-</button>
+              </div>
+
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Drinks -->
+        <div id="drinks">
+          <h4>Drinks</h4>
+          <hr>
+          <div class="media drink1">
+            <a class="media-left" onclick="return false">
+              <img class="media-object" src="../images/olive-garden/drink1.jpg"
+              alt="Generic placeholder image">
+            </a>
+
+            <div class="media-body">
+              <h3 class="media-heading">Strawberry Smoothie<div class="pull-right">₹ 150</div></h3>
+              <p>A blend of strawberry purèe and creamy frozen yogurt.</p>
+
+              <div class="add-minus-button">
+                <button type="button" class="btn btn-primary pull-right btn-sq-xs btn-danger"
+                onclick="changeQuantity(+1,13)">+</button>
+                <span id="quantity13-1" class="pull-right digit">0
+                  <script> displayQuantity(13);</script>
+                </span>
+                <button type="button" class="btn btn-primary pull-right btn-sq-xs btn-danger"
+                onclick="changeQuantity(-1,13)">-</button>
+              </div>
+
+            </div>
+          </div>
+
+          <hr>
+          <div class="media drink2">
+            <a class="media-left" onclick="return false">
+              <img class="media-object" src="../images/olive-garden/drink2.jpg"
+              alt="Generic placeholder image">
+            </a>
+
+            <div class="media-body">
+              <h3 class="media-heading">Frozen Cappuccino<div class="pull-right">₹ 180</div></h3>
+              <p>Chilled espresso blended with ice cream. Choose vanilla, caramel or traditional.</p>
+
+              <div class="add-minus-button">
+                <button type="button" class="btn btn-primary pull-right btn-sq-xs btn-danger"
+                onclick="changeQuantity(+1,14)">+</button>
+                <span id="quantity14-1" class="pull-right digit">0
+                  <script> displayQuantity(14);</script>
+                </span>
+                <button type="button" class="btn btn-primary pull-right btn-sq-xs btn-danger"
+                onclick="changeQuantity(-1,14)">-</button>
+              </div>
+
+            </div>
+          </div>
+
+          <hr>
+          <div class="media drink3">
+            <a class="media-left" onclick="return false">
+              <img class="media-object" src="../images/olive-garden/drink3.jpg"
+              alt="Generic placeholder image">
+            </a>
+
+            <div class="media-body">
+              <h3 class="media-heading">Mixed Berry Sparkling Water<div class="pull-right">₹ 180</div></h3>
+              <p>Sparkling water with a light berry flavor, summer berries and fresh mint.</p>
+
+              <div class="add-minus-button">
+                <button type="button" class="btn btn-primary pull-right btn-sq-xs btn-danger"
+                onclick="changeQuantity(+1,15)">+</button>
+                <span id="quantity15-1" class="pull-right digit">0
+                  <script> displayQuantity(15);</script>
+                </span>
+                <button type="button" class="btn btn-primary pull-right btn-sq-xs btn-danger"
+                onclick="changeQuantity(-1,15)">-</button>
+              </div>
+
+            </div>
+          </div>
+
+          <hr>
+          <div class="media drink4">
+            <a class="media-left" onclick="return false">
+              <img class="media-object" src="../images/olive-garden/drink4.jpg"
+              alt="Generic placeholder image">
+            </a>
+
+            <div class="media-body">
+              <h3 class="media-heading">Iced Tea<div class="pull-right">₹ 100</div></h3>
+              <p>Bacon ipsum dolor amet spare ribs kielbasa chicken leberkas. Brisket shank andouille cow pancetta beef tongue fatback pork belly turkey ground round pig. Picanha pork chop t-bone, shank turducken sausage prosciutto meatloaf leberkas strip steak bacon cupim porchetta. Jowl corned beef pork chop, ribeye ham hock chuck sausage. Ribeye ball tip cupim shank corned beef kielbasa leberkas pig ham strip steak.</p>
+
+              <div class="add-minus-button">
+                <button type="button" class="btn btn-primary pull-right btn-sq-xs btn-danger"
+                onclick="changeQuantity(+1,16)">+</button>
+                <span id="quantity16-1" class="pull-right digit">0
+                  <script> displayQuantity(16);</script>
+                </span>
+                <button type="button" class="btn btn-primary pull-right btn-sq-xs btn-danger"
+                onclick="changeQuantity(-1,16)">-</button>
+              </div>
+
+            </div>
+          </div>
+        </div>
+
+    </div>
+
+    <div class="right-checkout col-md-4">
+      <div class="panel panel-danger">
+        <div class="panel-heading">Checkout</div>
+
+        <div class="panel-body">
+          <div id="check1">
+
+            <div class="info">
+              Classic Nachos
+              <small class="quantity">
+                Quantity:
+                <span id="quantity1-2">
+                  <script> displayQuantity(1);</script>
+                </span>
+              </small>
+            </div>
+            <div class="price">
+              ₹ 350
+            </div>
+
+          </div>
+
+          <div id="check2">
+            <br>
+            <div class="info">
+              Chips & Salsa
+              <small class="quantity">
+                Quantity:
+                <span id="quantity2-2">
+                  <script> displayQuantity(2);</script>
+                </span>
+              </small>
+            </div>
+            <div class="price">
+              ₹ 300
+            </div>
+
+          </div>
+
+          <div id="check3">
+            <br>
+            <div class="info">
+              Bone-in Wings
+              <small class="quantity">
+                Quantity:
+                <span id="quantity3-2">
+                  <script> displayQuantity(3);</script>
+                </span>
+              </small>
+            </div>
+            <div class="price">
+              ₹ 250
+            </div>
+
+          </div>
+
+
+          <div id="check4">
+            <br>
+            <div class="info">
+              White Spinach Queso
+              <small class="quantity">
+                Quantity:
+                <span id="quantity4-2">
+                  <script> displayQuantity(4);</script>
+                </span>
+              </small>
+            </div>
+            <div class="price">
+              ₹ 400
+            </div>
+
+          </div>
+
+          <div id="check5">
+            <br>
+            <div class="info">
+              Alex's Santa Fe Burger*
+              <small class="quantity">
+                Quantity:
+                <span id="quantity5-2">
+                  <script> displayQuantity(5);</script>
+                </span>
+              </small>
+            </div>
+            <div class="price">
+              ₹ 150
+            </div>
+
+          </div>
+          <div id="check6">
+            <br>
+            <div class="info">
+              Chili's Chili Burger
+              <small class="quantity">
+                Quantity:
+                <span id="quantity6-2">
+                  <script> displayQuantity(6);</script>
+                </span>
+              </small>
+            </div>
+            <div class="price">
+              ₹ 200
+            </div>
+
+          </div>
+        
+          
+          <div id="check7">
+            <br>
+            <div class="info">
+              Oldtimer w/Cheese
+              <small class="quantity">
+                Quantity:
+                <span id="quantity7-2">
+                  <script> displayQuantity(7);</script>
+                </span>
+              </small>
+            </div>
+            <div class="price">
+              ₹ 100
+            </div>
+
+          </div>
+          <div id="check8">
+            <br>
+            <div class="info">
+              Big Mouth Bites
+              <small class="quantity">
+                Quantity:
+                <span id="quantity8-2">
+                  <script> displayQuantity(8);</script>
+                </span>
+              </small>
+            </div>
+            <div class="price">
+              ₹ 700
+            </div>
+
+          </div>
+          <div id="check9">
+            <br>
+            <div class="info">
+              Black Tie Mousse Cake
+              <small class="quantity">
+                Quantity:
+                <span id="quantity9-2">
+                  <script> displayQuantity(9);</script>
+                </span>
+              </small>
+            </div>
+            <div class="price">
+              ₹ 300
+            </div>
+
+          </div>
+          <div id="check10">
+            <br>
+            <div class="info">
+              Warm Apple Crostata
+              <small class="quantity">
+                Quantity:
+                <span id="quantity10-2">
+                  <script> displayQuantity(10);</script>
+                </span>
+              </small>
+            </div>
+            <div class="price">
+              ₹ 320
+            </div>
+
+          </div>
+          <div id="check11">
+            <br>
+            <div class="info">
+              Sicilian Cheesecake with Amarena Cherries
+              <small class="quantity">
+                Quantity:
+                <span id="quantity11-2">
+                  <script> displayQuantity(11);</script>
+                </span>
+              </small>
+            </div>
+            <div class="price">
+              ₹ 350
+            </div>
+
+          </div>
+          
+          <div id="check12">
+            <br>
+            <div class="info">
+              Tiramisu
+              <small class="quantity">
+                Quantity:
+                <span id="quantity12-2">
+                  <script> displayQuantity(12);</script>
+                </span>
+              </small>
+            </div>
+            <div class="price">
+              ₹ 400
+            </div>
+
+            <div id="check13">
+              <br>
+              <div class="info">
+                Strawberry Smoothie
+                <small class="quantity">
+                  Quantity:
+                  <span id="quantity13-2">
+                    <script> displayQuantity(13);</script>
+                  </span>
+                </small>
+              </div>
+              <div class="price">
+                ₹ 150
+              </div>
+  
+            </div>
+
+          </div>
+          <div id="check14">
+            <br>
+            <div class="info">
+              Frozen Cappuccino
+              <small class="quantity">
+                Quantity:
+                <span id="quantity14-2">
+                  <script> displayQuantity(14);</script>
+                </span>
+              </small>
+            </div>
+            <div class="price">
+              ₹ 180
+            </div>
+
+          </div>
+          <div id="check15">
+            <br>
+            <div class="info">
+              Mixed Berry Sparkling Water
+              <small class="quantity">
+                Quantity:
+                <span id="quantity15-2">
+                  <script> displayQuantity(15);</script>
+                </span>
+              </small>
+            </div>
+            <div class="price">
+              ₹ 180
+            </div>
+
+          </div>
+          <div id="check16">
+            <br>
+            <div class="info">
+              Iced Tea
+              <small class="quantity">
+                Quantity:
+                <span id="quantity16-2">
+                  <script> displayQuantity(16);</script>
+                </span>
+              </small>
+            </div>
+            <div class="price">
+              ₹ 100
+            </div>
+
+          </div>
+
+        </div>
+        <div class="panel-footer">
+          <span>Subtotal:</span>
+          <div class="pull-right">₹
+            <span id="total">0.00<script>displayTotal()</script></span>
+          </div>
+        </div>
+      </div>
+      <button style="margin-left: 140px;" class="btn btn-primary btn-lg" onclick="location.href='Chosse.html'" >Continue</button>
+      <!-- <h4><a href="Chosse.html" class="btn btn-primary btn-lg">Continue</a></h4> -->
+      
+<!--         
+// function validate(){
+//   var Total = document.getElementById("total")
+//   if(Total.values=='0.00'){
+//      alert("Please select your favorite dish");
+//       return false;
+//    }
+//    else{
+//      return true
+//    }
+// }
+//        -->
+    </div>
+
+  </div>
+
+  <!-- Footer Content -->
+  <footer class="footer-distributed container-fluid">
+    <div class="footer-left col-md-4">
+      <h3>Easy Eats Restaurant
+       </h3>
+       <div class="footer-icons">
+         <a href="#" target="blank"><i class="fa fa-facebook-square"></i></a>
+         <a href="#" target="blank"><i class="fa fa-twitter"></i></a>
+         <a href="#" target="blank"><i class="fa fa-instagram"></i></a>
+       </div>
+       <br>
+      <p class="footer-company-name">Easy Eats Restaurant © 2016</p>
+    </div>
+    <div class="footer-center col-md-4">
+      <div>
+        <span class="glyphicon glyphicon-map-marker footer-icons"></span>
+        <p>
+          56/8,XYZ Shopping mall, Surat, Varacha Road ,Gujarat,India
+        </p>
+      </div>
+      <div>
+        <span class="glyphicon glyphicon-earphone footer-icons"></span>
+        <p> 7600088373,
+          7600088372</p>
+      </div>
+      <div>
+        <span class="glyphicon glyphicon-envelope footer-icons"></span>
+        <p> EasyEatsRestaurant@gmail.com </p>
+      </div>
+    </div>
+
+    <div class="footer-right col-md-4">
+      <p class="footer-company-about">
+        <span>About Easy Eats Restauran:</span>
+        Easy Eats Restauran has delicious  food perfect for the whole family. Whether you're looking for freshly baked breadsticks or perfectly made pasta, Easy Eats Restauran has something for any appetite
+      </p>
+    </div>
+  </footer>
+
+<!-- Javascript Libs -->
+<script src="../js/jquery-3.1.1.min.js"></script>
+<script src="../libs/bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="../js/switch.js"></script>
+<script type="text/javascript" src="../js/menu.js"></script>
+
+</body></html>
